@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 const App = ({ subjects }) =>
   <ul>
     You like {subjects.map(subject => <li>{subject}</li>)}
