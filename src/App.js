@@ -1,13 +1,7 @@
-'use strict'
-
-var App = React.createClass({
-  render: function() {
-    var items = this.props.subjects.map(function(subject) {
-      return <li>{subject}</li>;
-    });
-    return <ul>You like {items}</ul>;
-  }
-});
+const App = ({ subjects }) =>
+  <ul>
+    You like {subjects.map(subject => <li>{subject}</li>)}
+  </ul>
 
 var mountNode = document.getElementById('app');
 ReactDOM.render(<App subjects={[ 'Javscript', 'Go' ]} />, mountNode);
