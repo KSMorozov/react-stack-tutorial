@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-const App = ({ subjects }) =>
-  <ul>
-    You Like {subjects.map(subject => <li>{subject}</li>)}
-  </ul>
+class App extends Component {
+  render() {
+    return(
+      <ul style={{ margin: '10px' }}>
+        You like: {this.props.subjects.map(subject => <li>{subject}</li>)}
+      </ul>
+    );
+  }
+}
 
 var mountNode = document.getElementById('app');
-ReactDOM.render(<App subjects={[ 'Javscript', 'Go' ]} />, mountNode);
+ReactDOM.render(<App subjects={[ 'Javscript', 'Go', 'Haskell' ]} />, mountNode);
