@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 const App = ({ subjects }) =>
   <ul>
-    You like {subjects.map(subject => <li>{subject}</li>)}
+    You Like {subjects.map(subject => <li>{subject}</li>)}
   </ul>
 
 var mountNode = document.getElementById('app');
