@@ -4,7 +4,7 @@
   "description": "Following React Stack 0 to 100 tutorial",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node server/server.js",
     "compile": "webpack",
     "compile:prod": "NODE_ENV=production webpack -p"
   },

@@ -4,11 +4,12 @@ var path = require('path');
 module.exports = {
   entry: [
     'webpack-hot-middleware/client',
-    path.join(__dirname, 'src', 'App.js'),
+    path.join(__dirname, 'src', 'index.js'),
   ],
   output: {
-    path: path.join(__dirname, 'src'),
-    filename: 'bundle.js'
+    path: path.join(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/static/'
   },
   module: {
     loaders: [{

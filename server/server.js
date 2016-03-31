@@ -8,7 +8,9 @@ var webpackConfig = require('../webpack.config');
 var app = express();
 var compiler = webpack(webpackConfig);
 
-app.use(webpackDevMiddleware(compiler));
+app.use(webpackDevMiddleware(compiler, {
+  noInfo: true, publicPath: webpackConfig.output.publicPath
+}));
 app.use(webpackHotMiddleware(compiler));
 app.use(express.static('src'));
 app.listen(8080);
