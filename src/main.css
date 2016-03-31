@@ -1,0 +1,48 @@
+.header {
+  font-size: 30px;
+  text-align: center;
+  padding: 10;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.product {
+  list-style-type: none;
+  margin: 10;
+  flex: 1;
+}
+
+.card {
+  width: 300;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid black;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+}
+
+.title {
+  height: 40;
+  padding: 5 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20;
+}
+
+.image {
+    width: 300;
+    height: 200;
+    background-size: cover;
+    border: 1px solid black;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+}
+
+.desc {
+  text-align: justify;
+  padding: 10;
+}

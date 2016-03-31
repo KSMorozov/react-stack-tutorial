@@ -12,11 +12,18 @@ module.exports = {
     publicPath: '/static/'
   },
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loader: 'babel',
-      include: path.join(__dirname, 'src')
-    }]
+    loaders: [
+      {
+        test: /\.js$/,
+        loader: 'babel',
+        include: path.join(__dirname, 'src')
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader',
+        include: path.join(__dirname, 'src')
+      }
+    ]
   },
   plugins: [
     new webpack.DefinePlugin({
